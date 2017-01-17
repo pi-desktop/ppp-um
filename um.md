@@ -1,7 +1,12 @@
 # Pi Desktop User Manual
 
 
-![](./_image/ppp.jpg)
+
+
+
+![Pi Desktop](./_image/ppp.jpg)
+
+[TOC]
 
 ## Introduction
 
@@ -23,22 +28,18 @@ It provides an intelligent and safe power controller, a realtime clock and a hig
 2. Heat sink
 3. USB Adapter (Micro-Type A)
 4. Long Spacer (x4)
-5. Screws (x2)
-6. Enclosure
+5. Short standoff (x4)
+6. Screws (x2)
+7. Enclosure
+8. Button cell CB2032
 
-> **TODO** 
->
-> [Need Stephen to reconfirm] How many screws are there? 2 or 4? For mSATA or enclosure? 
 
-> **TODO** 
->
-> [Need Stephen to reconfirm] Is there a button cell included? 
 
 ## Assembly & Install
 
 Here is a video overview and setup walkthrough: 
 > **TODO**
-> [Marketing or Engineering] Insert a assembly help video
+> [Marketing] Need a photo to show all the components (全家福)
 
 ### Additional Required Items
 
@@ -64,7 +65,7 @@ We recommend you to use a Raspberry Pi official power supply:
 ### Assembly Instruction
 
 > **TODO**
-> [Marketing] Insert the install illustration
+> [Marketing] Insert the install illustration (安装示意图, 从QSG截取并处理)
 
 1. Remove the protective film from the bottom of the heat sink and place it on the top of the Processor on the Raspberry Pi.
 2. Insert the pre-programmed micro-SD card into Raspberry Pi SD card slot. 
@@ -104,7 +105,7 @@ You need to install our software package to enable the power control, RTC and th
 $ sudo dpkg -i pidektop.deb
 ```
 
-### Clone filesystem for SD Card to SSD
+### Clone filesystem from SD Card to SSD
 Only if you are using SSD drive or USB flash drive and want the Pi Desktop to boot from SSD or USB drive instead of uSD card follow the below instructions:
 
 ```bash
@@ -140,13 +141,19 @@ Step 4
 ## Usage
 
 ### Power Control
+
+
+
 | Power Operation | Howto                                    |
 | --------------- | ---------------------------------------- |
 | Turn on         | Press the power button                   |
 | Shutdown        | Hold the button pressed for about **~2** seconds |
 | Forced shutdown | Hold the button pressed for about **~5** seconds to cutoff power regardless of any other conditions |
 
+
+
 ### RTC
+
 Each time your Pi boots it connects to what is called an NTP - Network Time Protocol - server and asks it the time. But what happens if your Pi is not connected to the internet? You're out of luck (or is that time?). Your Pi has no way of knowing what time it is.
 
 There is a solution in the form of a 'Real Time Clock' integrated on the Pi Desktop add-on board. It contains a clock chip and a battery that tell the Pi what time it is.
@@ -169,12 +176,13 @@ We recommend you to use a Raspberry Pi official power supply. But Maybe a phone 
 
 **! IMPORTANT !**, We do not test them, and the accuracy and the reliability can not be ensured.
 
+
+
 | Power Charger          | Vendor | Parameter | Working or not? |
 | ---------------------- | ------ | --------- | --------------- |
 | iPhone 5 power charger | Apple  | 5V@1A     | No              |
 
-> **TODO**
-> [Test Team] Need test team to do more testing and fill out the table
+
 
 ### Do I have to get a SSD drive with the Pi Desktop?
 
@@ -182,10 +190,15 @@ No, a SSD drive is not necessary.
 
 ## Software Upgrade and Support
 
+
+
 - Product Home: [www.element14.com/PiDesktop](www.element14.com/PiDesktop)
 - Technical Support: [support@embest-tech.com](mailto:support@embest-tech.com)
 
+
+
 ## Appendix
+
 ### A - Electrical characteristics
 
 | Characteristic        | Value    |
@@ -194,7 +207,7 @@ No, a SSD drive is not necessary.
 | Storage temperature   | -40~80°C |
 | Operating voltage     | 5V       |
 
-| Power Comsumtion       | Value  |
+| Power Consumption      | Value  |
 | ---------------------- | ------ |
 | Start-up process (Max) | 1100mA |
 | Normal stability       | 510mA  |
@@ -207,6 +220,9 @@ No, a SSD drive is not necessary.
 | Add-on Board | 87 x 56 x 1.4 mm     |
 
 ### C - Revision History
+
+
+
 | Revision | Author   | Description     |
 | :------: | -------- | --------------- |
 |  0.1.0   | Paul Niu | Initial version |
